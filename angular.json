@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "mui-tabs": {
+      "projectType": "library",
+      "root": "projects/mui-tabs",
+      "sourceRoot": "projects/mui-tabs/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/mui-tabs/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/mui-tabs/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/mui-tabs/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/mui-tabs/src/test.ts",
+            "tsConfig": "projects/mui-tabs/tsconfig.spec.json",
+            "karmaConfig": "projects/mui-tabs/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "mui-tabs"
 }
