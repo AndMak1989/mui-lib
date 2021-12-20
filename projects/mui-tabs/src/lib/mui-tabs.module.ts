@@ -1,16 +1,19 @@
+// Angular imports
 import { NgModule } from '@angular/core';
-import { MuiTabsComponent } from './mui-tabs.component';
-
-
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { MuiTabComponent } from './components';
+import { MuiTabsContainer } from './containers';
 
 @NgModule({
-  declarations: [
-    MuiTabsComponent
-  ],
-  imports: [
-  ],
-  exports: [
-    MuiTabsComponent
-  ]
+    imports: [ CommonModule, FormsModule ],
+    declarations: [
+      MuiTabComponent,
+      MuiTabsContainer
+    ],
+    exports: [
+      MuiTabComponent,
+      MuiTabsContainer
+    ]
 })
 export class MuiTabsModule { }
