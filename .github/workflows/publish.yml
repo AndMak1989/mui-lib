@@ -13,8 +13,8 @@ jobs:
           node-version: '15.x'
           registry-url: 'https://npm.pkg.github.com'
           scope: '@MYGITHUBUSERNAME'
-      - run: npm ci
-      - run: npm run lint
+#      - run: npm ci
+#      - run: npm run lint
       - run: npm run test
       - run: npm run build
       - run: npm publish
