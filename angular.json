@@ -31,9 +31,21 @@
             "tsConfig": "projects/mui-tabs/tsconfig.spec.json",
             "karmaConfig": "projects/mui-tabs/karma.conf.js"
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/mui-tabs/**/*.ts",
+              "projects/mui-tabs/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "mui-tabs"
+  "defaultProject": "mui-tabs",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
