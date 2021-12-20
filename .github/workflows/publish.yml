@@ -11,8 +11,6 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '14.x'
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@MYGITHUBUSERNAME'
       - run: npm install
       - run: npm run build -- --prod
 #      - run: npm run test --watch=false
