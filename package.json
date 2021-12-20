@@ -1,5 +1,5 @@
 {
-  "name": "ui-lib-workspace",
+  "name": "mui-tabs",
   "version": "0.0.4",
   "scripts": {
     "ng": "ng",
