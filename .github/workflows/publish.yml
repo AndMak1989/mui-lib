@@ -18,4 +18,4 @@ jobs:
 #      - run: npm run test --watch=false
       - run: npm run publish
         env:
-            NPM_TOKEN: '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'
+            NPM_TOKEN: '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'
