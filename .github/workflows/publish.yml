@@ -15,7 +15,7 @@ jobs:
           scope: '@MYGITHUBUSERNAME'
       - run: npm install
       - run: npm run build -- --prod
-      - run: npm run test --watch=false
+#      - run: npm run test --watch=false
       - run: npm run publish
         env:
             NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
