@@ -15,6 +15,7 @@
     "format:all": "prettier --config ./.prettierrc --write \"projects/*/**/*{.ts,.js,.json,.css,.scss}\""
   },
   "private": false,
+
   "dependencies": {
     "@angular/animations": "~13.1.0",
     "@angular/common": "~13.1.0",
