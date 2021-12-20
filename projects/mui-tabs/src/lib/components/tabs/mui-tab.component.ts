@@ -1,14 +1,14 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input } from '@angular/core';
 
-import { MuiTabsContainer } from "../../containers";
+import { MuiTabsContainer } from '../../containers';
 
 @Component({
-  selector: "tab",
+  selector: 'tab',
   host: {
-    "[class.hidden]": "!active"
+    '[class.hidden]': '!active',
   },
-  templateUrl: "./mui-tab.component.html",
-  styleUrls: ["./mui-tab.component.scss"]
+  templateUrl: './mui-tab.component.html',
+  styleUrls: ['./mui-tab.component.scss'],
 })
 export class MuiTabComponent {
   @Input() active!: boolean;

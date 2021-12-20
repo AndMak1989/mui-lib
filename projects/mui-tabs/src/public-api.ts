@@ -3,4 +3,4 @@
  */
 export { MuiTabComponent } from './lib/components';
 export { MuiTabsContainer } from './lib/containers';
-export { MuiTabsModule } from "./lib/mui-tabs.module";
+export { MuiTabsModule } from './lib/mui-tabs.module';
