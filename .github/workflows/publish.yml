@@ -17,7 +17,7 @@ jobs:
 #      - run: npm run lint
 #      - run: npm run test
       - run: npm install
-      - run: npm run build
-      - run: npm publish
+      - run: ng build
+      - run: ng publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
