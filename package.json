@@ -7,13 +7,14 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "publish": "npm publish",
     "format:fix": "pretty-quick --staged",
     "precommit": "run-s format:fix lint",
     "lint": "ng lint",
     "format:check": "prettier --config ./.prettierrc --list-different \"projects/*/**/*{.ts,.js,.json,.css,.scss}\"",
     "format:all": "prettier --config ./.prettierrc --write \"projects/*/**/*{.ts,.js,.json,.css,.scss}\""
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "~13.1.0",
     "@angular/common": "~13.1.0",
