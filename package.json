@@ -1,6 +1,6 @@
 {
-  "name": "mui-tabs",
-  "version": "0.0.4",
+  "name": "@makand1989/mui-tabs",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -15,7 +15,6 @@
     "format:all": "prettier --config ./.prettierrc --write \"projects/*/**/*{.ts,.js,.json,.css,.scss}\""
   },
   "private": false,
-
   "dependencies": {
     "@angular/animations": "~13.1.0",
     "@angular/common": "~13.1.0",
