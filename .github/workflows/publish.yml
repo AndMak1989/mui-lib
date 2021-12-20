@@ -11,9 +11,11 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '16.x'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@andmak'
       - run: npm install
       - run: npm run build -- --prod
 #      - run: npm run test --watch=false
       - run: npm run publish
         env:
-          NPM_TOKEN: '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'
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
