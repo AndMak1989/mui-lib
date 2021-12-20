@@ -1,1 +1,1 @@
-export * from "./mui-tabs.container";
+export * from './mui-tabs.container';

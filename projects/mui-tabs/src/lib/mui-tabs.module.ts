@@ -6,14 +6,8 @@ import { MuiTabComponent } from './components';
 import { MuiTabsContainer } from './containers';
 
 @NgModule({
-    imports: [ CommonModule, FormsModule ],
-    declarations: [
-      MuiTabComponent,
-      MuiTabsContainer
-    ],
-    exports: [
-      MuiTabComponent,
-      MuiTabsContainer
-    ]
+  imports: [CommonModule, FormsModule],
+  declarations: [MuiTabComponent, MuiTabsContainer],
+  exports: [MuiTabComponent, MuiTabsContainer],
 })
-export class MuiTabsModule { }
+export class MuiTabsModule {}

@@ -1,11 +1,11 @@
-import { Component, Input, EventEmitter, Output } from "@angular/core";
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 
-import { MuiTabComponent } from "../../components";
+import { MuiTabComponent } from '../../components';
 
 @Component({
-  selector: "tabs",
-  templateUrl: "./mui-tabs.container.html",
-  styleUrls: ["./mui-tabs.container.scss"]
+  selector: 'tabs',
+  templateUrl: './mui-tabs.container.html',
+  styleUrls: ['./mui-tabs.container.scss'],
 })
 export class MuiTabsContainer {
   @Input() disabled!: boolean;
@@ -16,24 +16,24 @@ export class MuiTabsContainer {
 
   addTab(tab: MuiTabComponent) {
     this.tabs.push(tab);
-	}
+  }
 
   selectTab(tab: MuiTabComponent) {
-    this.tabs.forEach(tab => {
+    this.tabs.forEach((tab) => {
       tab.active = false;
     });
     tab.active = true;
     this.currentTabChange.emit(tab);
-	}
+  }
 
   isDisabled() {
     if (this.disabled) {
-      return "block";
-    } else return "none";
-	}
+      return 'block';
+    } else return 'none';
+  }
 
   ngAfterViewInit() {
-    this.tabs.forEach(tab => {
+    this.tabs.forEach((tab) => {
       if (tab.active) {
         this.selectTab(tab);
         this.ifTabSelected = true;
