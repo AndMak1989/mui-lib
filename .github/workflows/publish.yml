@@ -19,4 +19,5 @@ jobs:
 #      - run: npm run test --watch=false
       - uses: JS-DevTools/npm-publish@v1
         with:
+           package: "../package.json"
            token: ${{ secrets.NPM_AUTH_TOKEN }}
