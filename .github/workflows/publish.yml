@@ -17,7 +17,7 @@ jobs:
           cache: 'npm'
       - run: npm install
       - run: npm run build -- --prod
-      - run: npm run test
+#      - run: npm run test
       - uses: JS-DevTools/npm-publish@v1
         with:
            package: "../package.json"
