@@ -5,7 +5,18 @@ on:
       - 'v*'
   workflow_dispatch:
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm install
+      - run: npm run build
+      - run: npm test
   publish:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -15,9 +26,7 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@AndMak1989'
           cache: 'npm'
-      - run: npm install
       - run: npm run build -- --prod
-#      - run: npm run test
       - uses: JS-DevTools/npm-publish@v1
         with:
            token: ${{ secrets.NPM_AUTH_TOKEN }}
