@@ -26,6 +26,7 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@AndMak1989'
           cache: 'npm'
+      - run: npm install
       - run: npm run build -- --prod
       - uses: JS-DevTools/npm-publish@v1
         with:
